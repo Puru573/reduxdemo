@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { buyBat } from '../redux/actionCreator';
 
 function Bat(props) {
   return (
@@ -18,7 +19,7 @@ const mapStateToProps=(state)=>{
 
 const mapDispatchToProps=(dispatch)=>{
     return{
-        buyBat:()=>dispatch({type:'Buy_Bat'})
+        buyBat:()=>dispatch(buyBat())
     }
 }
 

@@ -1,10 +1,11 @@
+import * as actionTypes from "./action"
 let initialState={
     bat:20
 }
 
 const batreducer=(state=initialState,action)=>{
     switch(action.type){
-        case 'Buy_Bat':
+        case actionTypes.BUY_BAT:
             return{...state,bat:state.bat-1} //immutqable change
         default :
         return state

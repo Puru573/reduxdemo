@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import { buyBall } from '../redux/actionCreator';
 
 function Ball(props) {
     const [qty,setQty]=useState(0);
@@ -17,7 +18,7 @@ const mapStateToProps=(state)=>{
 }
 const mapDispatchToProps=(dispatch)=>{
     return{
-        buyBall: (qty)=>dispatch({type:"Buy_Ball",payload:qty})
+        buyBall: (qty)=>dispatch(buyBall(qty))
     }
 }
 
